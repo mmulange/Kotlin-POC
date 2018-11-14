@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/activity_login_cl_login"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/login_background">
+
+        <TextView
+                android:id="@+id/activity_login_tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/activity_login_et_username"
+                android:textColor="@android:color/white"/>
+
+        <EditText android:id="@+id/activity_login_et_username"
+                  android:layout_width="0dp"
+                  android:layout_height="40dp"
+                  app:layout_constraintLeft_toRightOf="@+id/activity_login_tv_username"
+                  app:layout_constraintTop_toTopOf="parent"
+                  app:layout_constraintRight_toRightOf="parent"
+                  android:background="@drawable/edittext_background"
+                  android:textColor="@android:color/black"
+                  android:hint="@string/username"
+                  android:inputType="text"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="20dp"
+                  android:layout_marginLeft="10dp"
+                  android:padding="5dp"/>
+
+        <TextView
+                android:id="@+id/activity_login_tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                app:layout_constraintTop_toTopOf="@+id/activity_login_et_username"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/activity_login_et_password"
+                android:textColor="@android:color/white"/>
+
+        <EditText android:id="@+id/activity_login_et_password"
+                  android:layout_width="0dp"
+                  android:layout_height="40dp"
+                  app:layout_constraintLeft_toRightOf="@+id/activity_login_tv_username"
+                  app:layout_constraintTop_toTopOf="@+id/activity_login_et_username"
+                  app:layout_constraintRight_toRightOf="parent"
+                  android:background="@drawable/edittext_background"
+                  android:textColor="@android:color/black"
+                  android:hint="@string/password"
+                  android:layout_marginRight="10dp"
+                  android:inputType="textPassword"
+                  android:layout_marginTop="50dp"
+                  android:layout_marginLeft="10dp"
+                  android:padding="5dp"/>
+
+        <Button android:id="@+id/activity_login_btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:background="@drawable/edittext_background"
+                android:textColor="@android:color/black"
+                android:textAllCaps="false"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/activity_login_et_password"
+                app:layout_constraintLeft_toRightOf="@id/activity_login_tv_username"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+            android:id="@+id/activity_login_tv_demo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/demo_app"
+            app:layout_constraintTop_toBottomOf="@+id/activity_login_cl_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"/>
+
+</android.support.constraint.ConstraintLayout>
